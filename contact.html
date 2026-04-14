@@ -7,10 +7,8 @@
   <meta name="theme-color" content="#06060a" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-  <!-- NAV -->
   <nav class="nav">
     <div class="nav-wrap">
       <div class="nav-brand">
@@ -32,113 +30,113 @@
     </div>
   </nav>
 
-  <!-- PAGE -->
-  <section class="section hero" id="contact">
-    <div class="hero-glow"></div>
+  <section class="page" id="contact">
+    <div class="page-glow"></div>
 
-    <div class="section-wrap split-section">
-
-      <!-- LEFT -->
-      <div class="sticky-left">
+    <div class="page-wrap">
+      <div class="page-left">
         <span class="kicker">CONTACT / FORTITUDEFX</span>
 
-        <h2>
-          Reach out with
-          clarity and intent.
-        </h2>
+        <h1>Reach out with clarity and intent.</h1>
 
         <p>
           This is not a generic contact channel. If you're reaching out, be intentional.
           Whether it's about Bootcamp, VIP, or your current stage in trading — clarity leads the conversation.
         </p>
 
-        <p>
-          Every message is reviewed with context in mind. Keep it concise, structured, and relevant.
-        </p>
-      </div>
-
-      <!-- RIGHT (FORM) -->
-      <div class="hero-panel">
-
-        <div class="panel-top">
-          <div class="panel-brand">
-            <small>FortitudeFX</small>
-            <strong>Contact</strong>
+        <div class="left-meta">
+          <div class="left-meta-item">
+            <strong>Better messages get better responses</strong>
+            <span>Keep your inquiry clear, structured, and relevant to what you want from FortitudeFX.</span>
           </div>
 
-          <div class="panel-badge">Direct Line</div>
+          <div class="left-meta-item">
+            <strong>Use the right topic</strong>
+            <span>Select VIP, Bootcamp, or General so your inquiry is routed with context.</span>
+          </div>
+
+          <div class="left-meta-item">
+            <strong>Intent matters</strong>
+            <span>This page is built for real inquiries, not generic contact noise.</span>
+          </div>
         </div>
 
-        <form id="contactForm">
+        <a href="#contact-form" class="left-cta">
+          Continue to contact form
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
 
-          <!-- NAME -->
-          <div class="field">
-            <label>Full Name</label>
-            <input type="text" class="input" placeholder="Enter your name" required>
-          </div>
-
-          <!-- EMAIL -->
-          <div class="field">
-            <label>Email Address</label>
-            <input type="email" class="input" placeholder="Enter your email" required>
-          </div>
-
-          <!-- TOPIC -->
-          <div class="field">
-            <label>Topic</label>
-
-            <div class="choice-grid">
-              <label class="choice">
-                <input type="radio" name="topic" value="VIP" checked>
-                <span class="select-btn">VIP</span>
-              </label>
-
-              <label class="choice">
-                <input type="radio" name="topic" value="Bootcamp">
-                <span class="select-btn">Bootcamp</span>
-              </label>
-
-              <label class="choice">
-                <input type="radio" name="topic" value="General">
-                <span class="select-btn">General</span>
-              </label>
+      <div class="page-right">
+        <div class="form-shell" id="contact-form">
+          <div class="form-head">
+            <div class="form-brand">
+              <small>FortitudeFX</small>
+              <strong>Contact</strong>
             </div>
+
+            <div class="form-badge">Direct Line</div>
           </div>
 
-          <!-- MESSAGE -->
-          <div class="field">
-            <label>Your Message</label>
-            <textarea class="textarea" placeholder="Write your message with clarity..." required></textarea>
-          </div>
-
-          <!-- CONSENT -->
-          <label class="consent">
-            <input type="checkbox" required>
-            <span>I agree to be contacted regarding my inquiry.</span>
-          </label>
-
-          <!-- SUBMIT -->
-          <div class="submit-row">
-            <button type="submit" class="submit-btn">
-              Send Message →
-            </button>
-
-            <div class="sub-note">
-              Messages are reviewed with context and intent.
+          <form id="contactForm">
+            <div class="field">
+              <label for="contact-name">Full Name</label>
+              <input id="contact-name" type="text" class="input" placeholder="Enter your name" required>
             </div>
-          </div>
 
-        </form>
+            <div class="field">
+              <label for="contact-email">Email Address</label>
+              <input id="contact-email" type="email" class="input" placeholder="Enter your email" required>
+            </div>
 
-        <!-- THANK YOU STATE -->
+            <div class="field">
+              <label>Topic</label>
+
+              <div class="choice-grid">
+                <label class="choice">
+                  <input type="radio" name="topic" value="VIP" checked>
+                  <span class="select-btn">VIP</span>
+                </label>
+
+                <label class="choice">
+                  <input type="radio" name="topic" value="Bootcamp">
+                  <span class="select-btn">Bootcamp</span>
+                </label>
+
+                <label class="choice">
+                  <input type="radio" name="topic" value="General">
+                  <span class="select-btn">General</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="contact-message">Your Message</label>
+              <textarea id="contact-message" class="textarea" placeholder="Write your message with clarity..." required></textarea>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" required>
+              <span>I agree to be contacted regarding my inquiry.</span>
+            </label>
+
+            <div class="submit-row">
+              <button type="submit" class="submit-btn">
+                Send Message
+                <span aria-hidden="true">→</span>
+              </button>
+
+              <div class="sub-note">
+                Messages are reviewed with context and intent.
+              </div>
+            </div>
+          </form>
+        </div>
+
         <div class="thankyou-shell" id="thankyou">
-
           <span class="thankyou-kicker">MESSAGE RECEIVED</span>
 
-          <h2>
-            We’ll respond with
-            clarity.
-          </h2>
+          <h2>We’ll respond with clarity.</h2>
 
           <p>
             Your message has been received. If it aligns with FortitudeFX direction and scope,
@@ -161,23 +159,19 @@
               <span>Expect a focused and relevant reply.</span>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </div>
   </section>
 
-  <!-- JS -->
   <script>
     const form = document.getElementById('contactForm');
-    const panel = form.parentElement;
+    const formShell = document.getElementById('contact-form');
     const thankyou = document.getElementById('thankyou');
 
-    form.addEventListener('submit', function(e){
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      form.style.display = 'none';
+      formShell.style.display = 'none';
       thankyou.classList.add('show');
     });
   </script>
