@@ -2,179 +2,211 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FortitudeFX | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FortitudeFX | Waitlist</title>
   <meta name="theme-color" content="#06060a" />
+  <meta
+    name="description"
+    content="Join the FortitudeFX waitlist for VIP Discord, Bootcamp, or early access through a premium structured intake experience."
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <nav class="nav">
-    <div class="nav-wrap">
+    <div class="container nav-wrap">
       <div class="nav-brand">
         <a href="index.html#top">FORTITUDEFX</a>
       </div>
 
       <div class="nav-center">
-        <a href="index.html#about">About</a>
-        <a href="index.html#vip">VIP</a>
-        <a href="index.html#bootcamp">Bootcamp</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html#about">About Us</a>
+        <a href="#waitlist">Waitlist</a>
+        <a href="#journey">Journey</a>
+        <a href="contact.html#contact">Contact</a>
       </div>
 
       <div class="nav-cta">
         <a class="nav-btn nav-btn-secondary" href="index.html#bootcamp">Bootcamp</a>
-        <a class="nav-btn nav-btn-primary" href="index.html#vip">VIP</a>
+        <a class="nav-btn nav-btn-primary" href="#waitlist">Join Waitlist</a>
       </div>
     </div>
   </nav>
 
-  <section class="page" id="contact">
-    <div class="page-glow"></div>
+  <header class="hero" id="top">
+    <div class="container hero-wrap">
+      <div>
+        <div class="pill">2 Candles, 1 story · Mechanical Edge</div>
 
-    <div class="page-wrap">
-      <div class="page-left">
-        <span class="kicker">CONTACT / FORTITUDEFX</span>
+        <h1>
+          A darker,
+          <span class="gradient-text">purer premium</span>
+          FortitudeFX direction.
+        </h1>
 
-        <h1>Reach out with clarity and intent.</h1>
-
-        <p>
-          This is not a generic contact channel. If you're reaching out, be intentional.
-          Whether it's about Bootcamp, VIP, or your current stage in trading — clarity leads the conversation.
+        <p class="hero-copy">
+          This version pulls back the gold influence and returns to a richer black, grey, and deep-purple mood — closer to the premium direction you liked earlier, while still keeping FortitudeFX structure and usability.
         </p>
 
-        <div class="left-meta">
-          <div class="left-meta-item">
-            <strong>Better messages get better responses</strong>
-            <span>Keep your inquiry clear, structured, and relevant to what you want from FortitudeFX.</span>
-          </div>
-
-          <div class="left-meta-item">
-            <strong>Use the right topic</strong>
-            <span>Select VIP, Bootcamp, or General so your inquiry is routed with context.</span>
-          </div>
-
-          <div class="left-meta-item">
-            <strong>Intent matters</strong>
-            <span>This page is built for real inquiries, not generic contact noise.</span>
-          </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#waitlist">Join Waitlist</a>
+          <a class="btn btn-secondary" href="#journey">View Journey</a>
         </div>
 
-        <a href="#contact-form" class="left-cta">
-          Continue to contact form
-          <span aria-hidden="true">→</span>
-        </a>
+        <div class="hero-tags">
+          <span>Darker base</span>
+          <span>Minimal purple presence</span>
+          <span>No gold wash</span>
+        </div>
+
+        <div class="hero-footnote">Dark premium exploration v2</div>
       </div>
 
-      <div class="page-right">
-        <div class="form-shell" id="contact-form">
-          <div class="form-head">
-            <div class="form-brand">
+      <div class="panel-shell" id="waitlistShell">
+        <div class="panel" id="formCard">
+          <div class="panel-top">
+            <div class="panel-brand">
               <small>FortitudeFX</small>
-              <strong>Contact</strong>
+              <strong>Waitlist</strong>
             </div>
-
-            <div class="form-badge">Direct Line</div>
+            <div class="badge">Dark V2</div>
           </div>
 
-          <form id="contactForm">
-            <div class="field">
-              <label for="contact-name">Full Name</label>
-              <input id="contact-name" type="text" class="input" placeholder="Enter your name" required>
+          <form id="waitlistForm">
+            <div class="field-row">
+              <div class="field">
+                <label class="label" for="name">Full name</label>
+                <input class="input" id="name" type="text" placeholder="Enter your name" required />
+              </div>
+
+              <div class="field">
+                <label class="label" for="email">Email address</label>
+                <input class="input" id="email" type="email" placeholder="you@example.com" required />
+              </div>
             </div>
 
             <div class="field">
-              <label for="contact-email">Email Address</label>
-              <input id="contact-email" type="email" class="input" placeholder="Enter your email" required>
-            </div>
-
-            <div class="field">
-              <label>Topic</label>
-
-              <div class="choice-grid">
-                <label class="choice">
-                  <input type="radio" name="topic" value="VIP" checked>
-                  <span class="select-btn">VIP</span>
+              <div class="group-label">Select your interest</div>
+              <div class="option-grid">
+                <label class="option">
+                  <input type="radio" name="interest" value="VIP Discord" checked />
+                  <span>VIP Discord</span>
                 </label>
 
-                <label class="choice">
-                  <input type="radio" name="topic" value="Bootcamp">
-                  <span class="select-btn">Bootcamp</span>
+                <label class="option">
+                  <input type="radio" name="interest" value="Bootcamp" />
+                  <span>Bootcamp</span>
                 </label>
 
-                <label class="choice">
-                  <input type="radio" name="topic" value="General">
-                  <span class="select-btn">General</span>
+                <label class="option">
+                  <input type="radio" name="interest" value="Early Access" />
+                  <span>Early Access</span>
                 </label>
               </div>
             </div>
 
             <div class="field">
-              <label for="contact-message">Your Message</label>
-              <textarea id="contact-message" class="textarea" placeholder="Write your message with clarity..." required></textarea>
+              <label class="label" for="stage">Trading stage</label>
+              <input class="input" id="stage" type="text" placeholder="Beginner, intermediate, refining consistency, etc." />
+            </div>
+
+            <div class="field">
+              <label class="label" for="message">Optional note</label>
+              <textarea class="textarea" id="message" placeholder="Tell us what you are looking for in your next chapter with FortitudeFX."></textarea>
             </div>
 
             <label class="consent">
-              <input type="checkbox" required>
-              <span>I agree to be contacted regarding my inquiry.</span>
+              <input type="checkbox" required />
+              <span>I agree to receive FortitudeFX updates related to the selected interest and understand I can unsubscribe at any time.</span>
             </label>
 
-            <div class="submit-row">
-              <button type="submit" class="submit-btn">
-                Send Message
-                <span aria-hidden="true">→</span>
-              </button>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Join Waitlist</button>
+              <button class="btn btn-secondary" type="button" id="previewThankYou">Preview Thank You</button>
+            </div>
 
-              <div class="sub-note">
-                Messages are reviewed with context and intent.
-              </div>
+            <div class="support-copy">
+              Same premium structure, but with the warmer gold undertone removed and the mood pushed back toward darker luxury with subtle purple highlights only.
             </div>
           </form>
         </div>
 
-        <div class="thankyou-shell" id="thankyou">
-          <span class="thankyou-kicker">MESSAGE RECEIVED</span>
+        <div class="success-card" id="successCard">
+          <div class="pill" style="margin-bottom:18px;">Welcome to FortitudeFX</div>
 
-          <h2>We’ll respond with clarity.</h2>
+          <h3>Your next trading chapter starts with structure.</h3>
 
           <p>
-            Your message has been received. If it aligns with FortitudeFX direction and scope,
-            you will hear back with a structured response.
+            Thank you for joining the FortitudeFX waitlist. You have taken the first serious step toward a more disciplined path built on clarity, execution, and repeatable progress. We appreciate your trust and look forward to elevating your trading journey.
           </p>
 
-          <div class="thankyou-grid">
-            <div class="thankyou-item">
-              <strong>Context matters</strong>
-              <span>Clear, structured messages are prioritized.</span>
+          <div class="success-grid">
+            <div class="success-item">
+              <strong>Interest confirmed</strong>
+              <span>Your selected path has been captured for the right FortitudeFX follow-up.</span>
             </div>
 
-            <div class="thankyou-item">
-              <strong>No noise</strong>
-              <span>This is not a mass-response channel.</span>
+            <div class="success-item">
+              <strong>What happens next</strong>
+              <span>You will be among the first to hear when the next opportunity opens.</span>
             </div>
 
-            <div class="thankyou-item">
-              <strong>Next step</strong>
-              <span>Expect a focused and relevant reply.</span>
+            <div class="success-item">
+              <strong>Built for progress</strong>
+              <span>This is not just registration. It is the start of a more intentional trading journey.</span>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </header>
+
+  <section id="about" class="section" style="padding-top:84px; padding-bottom:84px; border-top:1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <div class="pill">Closer to the earlier premium direction you preferred</div>
+
+      <p class="hero-copy" style="margin-top:18px; max-width:760px; font-size:16px;">
+        This concept is intentionally stripped of the champagne wash and brought back toward a more monochrome-dark luxury mood with only restrained purple presence.
+      </p>
+    </div>
+  </section>
+
+  <section id="journey" class="section" style="padding-top:0; padding-bottom:84px;">
+    <div class="container">
+      <div class="hero-tags" style="margin-top:0;">
+        <span>Dark black-purple base</span>
+        <span>Greyed luxury restraint</span>
+        <span>Cleaner premium tone</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:0 0 44px;">
+    <div class="container" style="color:rgba(255,255,255,0.44); font-size:13px; text-align:center;">
+      © 2026 FortitudeFX. All rights reserved.
+    </div>
   </section>
 
   <script>
-    const form = document.getElementById('contactForm');
-    const formShell = document.getElementById('contact-form');
-    const thankyou = document.getElementById('thankyou');
+    const form = document.getElementById('waitlistForm');
+    const formCard = document.getElementById('formCard');
+    const successCard = document.getElementById('successCard');
+    const previewThankYou = document.getElementById('previewThankYou');
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      formShell.style.display = 'none';
-      thankyou.classList.add('show');
+    function showThankYou() {
+      formCard.style.display = 'none';
+      successCard.classList.add('show');
+      successCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      showThankYou();
+    });
+
+    previewThankYou.addEventListener('click', function () {
+      showThankYou();
     });
   </script>
-
 </body>
 </html>
