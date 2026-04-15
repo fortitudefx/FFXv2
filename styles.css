@@ -2969,66 +2969,167 @@ footer {
 
 
 /* =========================================================
-   PHASE 3A â€” VISUAL PARITY NORMALIZATION
-   Canonical reference: homepage/index card language
-   Goal: align numbered-card cues and hover behavior
-   without changing HTML structure or content
+   PHASE 3B â€” TARGETED CONSISTENCY CORRECTION PASS
+   Canonical reference: index.html interaction language
+   Scope: VIP Discord + Bootcamp consistency only
    ========================================================= */
 
-/* Numbered-card hover parity: use the homepage/index subtle lift */
-.info-card,
-.vipd-feature-card,
-.vipd-quote-card {
-  transition: transform 0.32s ease, border-color 0.32s ease, background 0.32s ease, box-shadow 0.32s ease;
+/* -----------------------------
+   VIP DISCORD â€” quieter ambient cues
+   ----------------------------- */
+
+.vipd-hero-shell::before {
+  background: radial-gradient(circle, rgba(122, 92, 255, 0.11), transparent 70%);
 }
 
-.info-card:hover,
+.vipd-hero-shell::after {
+  background: radial-gradient(circle, rgba(255,255,255,0.035), transparent 74%);
+}
+
+.vipd-feature-card::after {
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(122,92,255,0.09), transparent 72%);
+}
+
+.vipd-pricing-shell::before {
+  width: 210px;
+  height: 210px;
+  background: radial-gradient(circle, rgba(122,92,255,0.075), transparent 74%);
+}
+
+.vipd-cta-panel::before {
+  right: -110px;
+  bottom: -110px;
+  width: 170px;
+  height: 170px;
+  background: radial-gradient(circle, rgba(122,92,255,0.08), transparent 74%);
+  opacity: 0.65;
+}
+
+/* -----------------------------
+   VIP DISCORD â€” index-style subtle hover language
+   ----------------------------- */
+
+.vipd-feature-card,
+.vipd-quote-card,
+.vipd-preview-card,
+.vipd-channel,
+.vipd-plan-card {
+  transition:
+    transform 0.32s ease,
+    border-color 0.32s ease,
+    background 0.32s ease,
+    box-shadow 0.32s ease,
+    opacity 0.32s ease;
+}
+
 .vipd-feature-card:hover,
-.vipd-quote-card:hover {
+.vipd-quote-card:hover,
+.vipd-preview-card:hover,
+.vipd-channel:hover,
+.vipd-plan-card:hover {
   transform: translateY(-4px);
   border-color: rgba(167, 139, 250, 0.2);
   background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.022));
+  box-shadow:
+    0 16px 55px rgba(0,0,0,0.32),
+    inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
-/* Normalize numbered markers to the boxed treatment used on index VIP cards */
-.faq-num,
-.info-card .num {
-  position: relative;
-  z-index: 1;
-  width: 42px;
-  height: 42px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(122,92,255,0.14);
-  color: rgba(241, 234, 255, 0.95);
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  padding-top: 0;
-  margin-bottom: 16px;
+.vipd-feature-card:hover::after,
+.vipd-plan-card:hover::before {
+  opacity: 0.65;
 }
 
-/* Preserve FAQ grid spacing with boxed number marker */
-.faq-card {
-  align-items: start;
+.vipd-channel:hover .vipd-channel-tag,
+.vipd-preview-card:hover .vipd-preview-label {
+  border-color: rgba(167, 139, 250, 0.22);
+  background: rgba(122,92,255,0.10);
 }
 
-/* Keep VIP-number exactly on the same visual family explicitly */
-.vip-number {
-  letter-spacing: 0.08em;
+/* Keep selected pricing state premium but calmer */
+.vipd-plan-input:checked + .vipd-plan-card {
+  border-color: rgba(167, 139, 250, 0.24);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.022));
+  box-shadow:
+    0 16px 55px rgba(0,0,0,0.32),
+    inset 0 1px 0 rgba(255,255,255,0.05),
+    0 0 0 1px rgba(122,92,255,0.08);
+  transform: translateY(-2px);
 }
 
-/* Mobile parity for boxed number markers */
-@media (max-width: 768px) {
-  .faq-num,
-  .info-card .num,
-  .vip-number {
-    width: 40px;
-    height: 40px;
-    border-radius: 14px;
-    font-size: 13px;
-    margin-bottom: 14px;
+.vipd-plan-input:checked + .vipd-plan-card .vipd-plan-select {
+  border-color: rgba(122,92,255,0.72);
+  background: rgba(122,92,255,0.16);
+  box-shadow: 0 0 0 5px rgba(122,92,255,0.06);
+}
+
+/* -----------------------------
+   VIP DISCORD â€” footer closer to index language
+   ----------------------------- */
+
+.vipd-footer {
+  padding: 20px 24px 44px;
+}
+
+.vipd-footer-wrap {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.44);
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .vipd-footer {
+    padding: 20px 18px 44px;
   }
 }
+
+/* -----------------------------
+   BOOTCAMP â€” weekly cards get homepage-style hover
+   ----------------------------- */
+
+.timeline-card,
+.final-card {
+  transition: transform 0.32s ease, border-color 0.32s ease, background 0.32s ease, box-shadow 0.32s ease;
+}
+
+.timeline-card:hover,
+.final-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(167, 139, 250, 0.2);
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.022));
+  box-shadow:
+    0 16px 55px rgba(0,0,0,0.32),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* -----------------------------
+   BOOTCAMP â€” static final cards align better to core card family
+   ----------------------------- */
+
+.final-card {
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.018));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 16px 55px rgba(0,0,0,0.32),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.final-card::before {
+  inset: auto -90px -130px auto;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(122, 92, 255, 0.08), rgba(122, 92, 255, 0));
+  filter: blur(20px);
+}
+
+/* -----------------------------
+   BOOTCAMP HERO TYPOGRAPHY
+   NOTE: exact isolated correction requires the bootcamp page's
+   unique wrapper selector from HTML. Not changed here to avoid
+   affecting waitlist or homepage typography.
+   ----------------------------- */
