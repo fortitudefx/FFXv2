@@ -1463,3 +1463,284 @@ footer {
     justify-content: center;
   }
 }
+
+/* ========================================
+   BOOTCAMP PAGE — v1 (PRODUCTION)
+   Extends stylesv1.1 without altering
+   shared homepage or waitlist structure
+   ======================================== */
+
+.lead {
+  max-width: 760px;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.muted {
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.85;
+}
+
+.panel-top,
+.metric-grid,
+.timeline-grid,
+.pricing-grid,
+.faq-grid,
+.final-grid {
+  display: grid;
+}
+
+.panel-top {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.panel-brand small,
+.tiny {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.panel-brand strong {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.panel-badge,
+.metric,
+.bootcamp-chip {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 18px;
+}
+
+.panel-badge {
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.benefit-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.benefit-item {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+}
+
+.metric-grid,
+.pricing-grid,
+.faq-grid,
+.final-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.metric {
+  padding: 18px;
+}
+
+.metric strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.45rem;
+  letter-spacing: -0.03em;
+}
+
+.metric span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.92rem;
+}
+
+.bootcamp-hero-actions,
+.pricing-actions,
+.cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bootcamp-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 14px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.9rem;
+  transition: 0.28s ease;
+  white-space: nowrap;
+}
+
+.bootcamp-chip:hover {
+  transform: translateY(-1px);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.timeline-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.timeline-card,
+.pricing-card,
+.final-card {
+  position: relative;
+  padding: 30px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+}
+
+.timeline-week {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: rgba(122, 92, 255, 0.12);
+  border: 1px solid rgba(122, 92, 255, 0.24);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.timeline-card p,
+.pricing-note {
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.8;
+}
+
+.timeline-list,
+.pricing-list,
+.faq-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.timeline-list li,
+.pricing-list li,
+.faq-list li {
+  position: relative;
+  padding-left: 18px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.timeline-list li::before,
+.pricing-list li::before,
+.faq-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(122, 92, 255, 0.9);
+  box-shadow: 0 0 14px rgba(122, 92, 255, 0.42);
+}
+
+.pricing-highlight {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 16px 0 22px;
+}
+
+.price-row strong {
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.price-row span {
+  color: rgba(255, 255, 255, 0.54);
+  text-decoration: line-through;
+}
+
+.pricing-card.featured {
+  border-color: rgba(122, 92, 255, 0.22);
+  box-shadow:
+    0 22px 80px rgba(0, 0, 0, 0.38),
+    0 0 70px rgba(122, 92, 255, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.final-card {
+  overflow: hidden;
+}
+
+.final-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -100px -160px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(122, 92, 255, 0.12), rgba(122, 92, 255, 0));
+  filter: blur(26px);
+  pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+  .timeline-grid,
+  .pricing-grid,
+  .final-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .metric-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-card,
+  .pricing-card,
+  .final-card {
+    padding: 24px;
+  }
+}
