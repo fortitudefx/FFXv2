@@ -56,11 +56,6 @@ body::before {
 
 a { color: inherit; text-decoration: none; }
 
-/* =========================================================
-   GLOBAL FOUNDATION
-   Baseline-compatible tokens, reset, body, navigation
-   ========================================================= */
-
 .nav {
   position: fixed;
   top: 0;
@@ -191,14 +186,7 @@ a { color: inherit; text-decoration: none; }
   color: white;
 }
 
-/* =========================================================
-   SHARED PATTERN NOTE
-   Existing baseline contains repeated premium-surface, CTA,
-   label, glow, and layout systems across pages.
-   Preserved here intentionally for visual parity.
-   ========================================================= */
-
-/* HOME PAGE */
+/* INDEX PAGE */
 
 .section {
   position: relative;
@@ -1247,10 +1235,6 @@ footer {
   }
 }
 
-/* =========================================================
-   BOOTCAMP TEASER PAGE BLOCK
-   ========================================================= */
-
 /* ========================================
    BOOTCAMP TEASER SECTION â€” v1 (LOCKED)
    ======================================== */
@@ -1479,10 +1463,6 @@ footer {
     justify-content: center;
   }
 }
-
-/* =========================================================
-   BOOTCAMP PAGE
-   ========================================================= */
 
 /* ========================================
    BOOTCAMP PAGE â€” v1 (PRODUCTION)
@@ -1764,11 +1744,6 @@ footer {
     padding: 24px;
   }
 }
-
-/* =========================================================
-   VIP PAGE
-   Namespaced styles retained exactly for compatibility
-   ========================================================= */
 
 /* =========================================================
    FORTITUDEFX VIP DISCORD PAGE
@@ -2994,8 +2969,66 @@ footer {
 
 
 /* =========================================================
-   MAINTENANCE NOTE
-   This corrected file restores baseline rendering behavior.
-   Future consolidation should be done only with per-page
-   visual comparison after each small change.
+   PHASE 3A â€” VISUAL PARITY NORMALIZATION
+   Canonical reference: homepage/index card language
+   Goal: align numbered-card cues and hover behavior
+   without changing HTML structure or content
    ========================================================= */
+
+/* Numbered-card hover parity: use the homepage/index subtle lift */
+.info-card,
+.vipd-feature-card,
+.vipd-quote-card {
+  transition: transform 0.32s ease, border-color 0.32s ease, background 0.32s ease, box-shadow 0.32s ease;
+}
+
+.info-card:hover,
+.vipd-feature-card:hover,
+.vipd-quote-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(167, 139, 250, 0.2);
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.022));
+}
+
+/* Normalize numbered markers to the boxed treatment used on index VIP cards */
+.faq-num,
+.info-card .num {
+  position: relative;
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(122,92,255,0.14);
+  color: rgba(241, 234, 255, 0.95);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  padding-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Preserve FAQ grid spacing with boxed number marker */
+.faq-card {
+  align-items: start;
+}
+
+/* Keep VIP-number exactly on the same visual family explicitly */
+.vip-number {
+  letter-spacing: 0.08em;
+}
+
+/* Mobile parity for boxed number markers */
+@media (max-width: 768px) {
+  .faq-num,
+  .info-card .num,
+  .vip-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+}
